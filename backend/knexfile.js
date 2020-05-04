@@ -7,15 +7,11 @@
 // 1) CREATE USER nomedousuario SUPERUSER INHERIT CREATEDB CREATEROLE;
 // 2) ALTER USER nomedousuario PASSWORD 'novaSenha';
 
+const { db } = require('./.env')
 
 module.exports = {
 	client: 'postgresql',
-	connection: {
-		database: 'knowledge',
-		port: 5433,
-		user:     'admin',
-		password: 'admin'
-	},
+	connection: db,
 	pool: {
 		min: 2,
 		max: 10
