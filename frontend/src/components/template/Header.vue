@@ -18,12 +18,13 @@ export default {
     },
     computed: {
         icon() {
-            return "fa-angle-left"
+            return this.$store.state.isMenuVisible ? "fa-angle-left" : "fa-angle-down"
         }
     },
     methods: {
         toggleMenu() {
-            
+            // chama pelo Vuex a mutation
+            this.$store.commit('toggleMenu')
         }
     }
 }
