@@ -93,6 +93,7 @@ export default {
             axios.get(url).then(res => {
                 this.users = res.data
             })
+            .catch(showError)
         },
         reset() {
             this.mode = 'save',
