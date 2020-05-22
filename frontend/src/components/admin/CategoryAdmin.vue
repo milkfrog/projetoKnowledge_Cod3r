@@ -23,6 +23,7 @@
             <b-button variant="danger" v-if="mode === 'remove'"
                 @click="remove">Excluir</b-button>
             <b-button class="ml-2" @click="reset">Cancelar</b-button>
+        </b-form>
         <hr>
         <b-table hover striped :items="categories" :fields="fields">
             <template slot="actions" slot-scope="data">
