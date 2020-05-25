@@ -27,6 +27,7 @@ module.exports = app => {
             admin: user.admin,
             // issued at
             iat: now,
+            // token valido por 3 dias:
             exp: now + (60 * 60 * 24 * 3)
         }
 
